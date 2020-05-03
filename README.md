@@ -4,7 +4,7 @@ The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the la
 
 &nbsp;
 
-![screenshot-desktop](https://user-images.githubusercontent.com/353959/66987533-40eae100-f0c1-11e9-822e-cbaf38fb8e3f.png)
+![screenshot-desktop](https://blog.roostgo.com/content/images/2020/02/Screen-Shot-2020-02-22-at-6.17.34-PM.png)
 
 &nbsp;
 
@@ -29,17 +29,16 @@ One neat trick is that you can also create custom one-off templates by adding th
 - `tag-news.hbs` - Custom template for `/tag/news/` archive
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
 
-
 # Development
 
-Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
 # install dependencies
-yarn install
+npm run install
 
 # run development server
-yarn dev
+npm run dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
@@ -48,7 +47,7 @@ The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which
 
 ```bash
 # create .zip file
-yarn zip
+npm run zip
 ```
 
 # PostCSS Features Used
@@ -57,13 +56,11 @@ yarn zip
 - Variables - Simple pure CSS variables
 - [Color Function](https://github.com/postcss/postcss-color-function)
 
-
 # SVG Icons
 
 Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
 You can add your own SVG icons in the same manner.
-
 
 # Copyright & License
 
